@@ -1,4 +1,4 @@
-package model;
+package org.ies.airline.model;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -13,6 +13,49 @@ public class Airline {
         this.name = name;
         this.flights = flights;
     }
+
+
+                  // -- MÉTODOS -- //
+
+
+    // Muestra todos los vuelos
+
+    public void showAllFlights(){
+
+        if (flights != null){
+
+            for (Flight flight: flights){
+
+                System.out.println(flight);
+
+            }
+
+        } else {
+
+            System.out.println("No hay vuelos disponibles");
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     public String getName() {

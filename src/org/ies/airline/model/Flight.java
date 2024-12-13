@@ -1,9 +1,9 @@
-package model;
+package org.ies.airline.model;
 
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Passenger {
+public class Flight {
 
     private int flightNumber;
     private String origin;
@@ -12,7 +12,7 @@ public class Passenger {
     private Passenger[] passengers;
 
 
-    public Passenger(int flightNumber, String origin, String destination, int gateNumber, Passenger[] passengers) {
+    public Flight(int flightNumber, String origin, String destination, int gateNumber, Passenger[] passengers) {
         this.flightNumber = flightNumber;
         this.origin = origin;
         this.destination = destination;
@@ -64,7 +64,7 @@ public class Passenger {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Passenger passenger = (Passenger) o;
+        Flight passenger = (Flight) o;
         return flightNumber == passenger.flightNumber && gateNumber == passenger.gateNumber && Objects.equals(origin, passenger.origin) && Objects.equals(destination, passenger.destination) && Objects.deepEquals(passengers, passenger.passengers);
     }
 

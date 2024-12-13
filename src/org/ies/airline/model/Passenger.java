@@ -1,8 +1,8 @@
-package model;
+package org.ies.airline.model;
 
 import java.util.Objects;
 
-public class Flight {
+public class Passenger {
 
 
     private String nif;
@@ -11,7 +11,7 @@ public class Flight {
     private Integer seatNumber;
 
 
-    public Flight(String nif, String name, String surname, Integer seatNumber) {
+    public Passenger(String nif, String name, String surname, Integer seatNumber) {
         this.nif = nif;
         this.name = name;
         this.surname = surname;
@@ -56,7 +56,7 @@ public class Flight {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Flight flight = (Flight) o;
+        Passenger flight = (Passenger) o;
         return Objects.equals(nif, flight.nif) && Objects.equals(name, flight.name) && Objects.equals(surname, flight.surname) && Objects.equals(seatNumber, flight.seatNumber);
     }
 

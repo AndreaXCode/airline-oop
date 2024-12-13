@@ -1,24 +1,23 @@
-package Components;
+package org.ies.airline.components;
 
-import model.Passenger;
+import org.ies.airline.model.Flight;
+import org.ies.airline.model.Passenger;
 
 import java.util.Scanner;
 
-public class PassengerReader {
+public class FlightReader {
 
 
     private final Scanner scanner;
-    private final FlightReader flightReader;
+    private final PassengerReader passengerReader;
 
 
-
-    public PassengerReader(Scanner scanner, FlightReader flightReader) {
+    public FlightReader(Scanner scanner, PassengerReader passengerReader) {
         this.scanner = scanner;
-        this.flightReader = flightReader;
+        this.passengerReader = passengerReader;
     }
 
-
-    public Passenger read(){
+    public Flight read(){
 
 
         System.out.println("--Datos del pasajero--");
@@ -42,23 +41,23 @@ public class PassengerReader {
         int size = scanner.nextInt();
         scanner.nextLine();
 
-        Passenger[] passenger = new Passenger[size];
+        Passenger[] passengers = new Passenger[size];
 
         for (int i = 0; i < size; i++) {
 
-            passenger[i] = flightReader.read();
+            passengers[i] = passengerReader.read();
 
 
         }
 
-        return new Passenger(
+        return new Flight(
 
 
                 flightNumber,
                 origin,
                 destination,
                 gateNumber,
-                passenger
+                passengers
         );
 
 

@@ -1,15 +1,14 @@
-package Components;
+package org.ies.airline.components;
 
-import model.Flight;
-import model.Passenger;
+import org.ies.airline.model.Passenger;
 
 import java.util.Scanner;
 
-public class FlightReader {
+public class PassengerReader {
 
     private final Scanner scanner;
 
-    public FlightReader(Scanner scanner) {
+    public PassengerReader(Scanner scanner) {
         this.scanner = scanner;
     }
 
@@ -30,7 +29,7 @@ public class FlightReader {
         Integer seatNumber = scanner.nextInt();
         scanner.nextLine();
 
-        return new Flight(
+        return new Passenger(
 
                 nif,
                 name,
