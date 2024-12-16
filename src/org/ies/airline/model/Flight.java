@@ -2,6 +2,7 @@ package org.ies.airline.model;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Flight {
 
@@ -19,6 +20,72 @@ public class Flight {
         this.gateNumber = gateNumber;
         this.passengers = passengers;
     }
+
+    public void showInfo(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("--Datos del vuelo--");
+
+        System.out.print("Numero de vuelo:");
+        int flightNumber = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.print("Origen:");
+        String origin = scanner.nextLine();
+
+        System.out.print("Destino:");
+        String destination = scanner.nextLine();
+
+        System.out.print("Puerta de embarque:");
+        int gateNumber = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Pasajeros:");
+
+
+        for (Passenger passenger: passengers) {
+
+            passenger.showInfo();
+
+        }
+    }
+
+
+    public Boolean hasPassenger(String nif){
+
+        for (Passenger passenger: passengers){
+
+            boolean found = true;
+
+            if (passenger.getNif().equals(nif){
+
+                return true;
+            }
+
+        }
+
+        return false;
+
+    }
+
+    public Passenger findPassenger(String nif){
+
+        for (Passenger passenger = null; passengers){
+
+            if (passenger.getNif().equals(nif)){
+
+                return passenger;
+            }
+        }
+
+        return null;
+    }
+
+
+
+
+
 
     public int getFlightNumber() {
         return flightNumber;

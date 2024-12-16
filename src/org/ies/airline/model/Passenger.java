@@ -1,6 +1,7 @@
 package org.ies.airline.model;
 
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Passenger {
 
@@ -16,6 +17,27 @@ public class Passenger {
         this.name = name;
         this.surname = surname;
         this.seatNumber = seatNumber;
+    }
+
+    public void showInfo(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("--Datos del pasajero--");
+
+        System.out.print("NIF:");
+        String nif = scanner.nextLine();
+
+        System.out.print("Nombre:");
+        String name = scanner.nextLine();
+
+        System.out.print("Apellido:");
+        String surname = scanner.nextLine();
+
+        System.out.print("NIF:");
+        String seatNumber = scanner.nextLine();
+
+
     }
 
 
