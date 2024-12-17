@@ -56,7 +56,6 @@ public class Flight {
 
         for (Passenger passenger: passengers){
 
-            boolean found = true;
 
             if (passenger.getNif().equals(nif)){
 
@@ -69,11 +68,11 @@ public class Flight {
 
     }
 
+    //findPassenger(String nif): busca el pasajero en el vuelo y lo devuelve, si no existe devuelve null
     public Passenger findPassenger(String nif){
 
 
-
-        for (Passenger passenger = passengers){
+        for (Passenger passenger: passengers){
 
 
             if (passenger.getNif().equals(nif)){
@@ -84,10 +83,6 @@ public class Flight {
 
         return null;
     }
-
-
-
-
 
 
     public int getFlightNumber() {

@@ -76,7 +76,7 @@ public class AirlineApp {
             int flightNumber = scanner.nextInt();
             scanner.nextLine();
 
-            airline.showPassengerSeat(flightNumber, nif);
+            airline.getPassengerSeat(flightNumber, nif);
 
 
         } else if (option == 5) {

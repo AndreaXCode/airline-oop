@@ -56,17 +56,14 @@ public class Airline {
 
 
     //findFlight(int flightNumber): busca el vuelo y lo devuelve, si no existe devuelve null
-    public Airline findFlight(int flightNumber){
+    public Flight findFlight(int flightNumber){
 
         for (Flight flight: flights){
 
             if (flight.getFlightNumber() == flightNumber){
 
-                System.out.println("Vuelos: " + flight);
+                return flight;
 
-            } else {
-
-                System.out.println("No existe ese vuelo");
             }
 
         }
@@ -97,22 +94,21 @@ public class Airline {
         }
     }
 
-    //showPassengerSeat(int flightNumber, String nif): Devuelve el asiento del pasajero en el vuelo, si no existe el vuelo o el pasajero, devuelve null
-    public Passenger showPassengerSeat(int flightNumber, String nif){
+    //getPassengerSeat(int flightNumber, String nif): Devuelve el asiento del pasajero en el vuelo, si no existe el vuelo o el pasajero, devuelve null
+    public Integer getPassengerSeat(int flightNumber, String nif){
 
-        for (Flight flight: flights){
+        //Busca el vuelo y lo devuelve
 
-            for (Passenger passenger: flight.getPassengers()){
+        Flight flight = findFlight(flightNumber);
 
-                if (passenger.getNif().equals(nif) && flight.getFlightNumber() == flightNumber){
+        if (flight != null){
 
-                    System.out.println("Asiento del pasajero con nif " + nif);
-                    System.out.println(passenger.getSeatNumber());
-                }
-            }
+            Passenger passenger = flight.findPassenger(nif);
+
         }
 
         return null;
+
     }
 
 
