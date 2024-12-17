@@ -58,7 +58,7 @@ public class Flight {
 
             boolean found = true;
 
-            if (passenger.getNif().equals(nif){
+            if (passenger.getNif().equals(nif)){
 
                 return true;
             }
@@ -71,7 +71,10 @@ public class Flight {
 
     public Passenger findPassenger(String nif){
 
-        for (Passenger passenger = null; passengers){
+
+
+        for (Passenger passenger = passengers){
+
 
             if (passenger.getNif().equals(nif)){
 

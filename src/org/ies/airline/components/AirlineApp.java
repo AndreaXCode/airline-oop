@@ -22,6 +22,7 @@ public class AirlineApp {
         Airline airline = airlineReader.read();
 
 
+
         //Inicia un bucle de menú con las siguientes opciones
 
         //Crear variable
@@ -43,22 +44,73 @@ public class AirlineApp {
             scanner.nextLine();
 
 
+        if (option == 1){
+
+            //Muestra todos los vuelos
+            airline.showFlights();
+
+        } else if (option == 2) {
+
+            //Mostrar vuelos origen
+            System.out.print("Por favor, introduzca su origen:");
+            String origin = scanner.nextLine();
+
+            airline.showFlightsFromOrigin(origin);
+
+        } else if (option == 3) {
+
+            //Muestra los vuelos de un pasajero
+            System.out.print("Por favor, introduzca el nif del pasajero:");
+            String nif = scanner.nextLine();
+
+            airline.showPassengerFlights(nif);
 
 
+        } else if (option == 4) {
+
+            //Muestra asiento de pasajero
+            System.out.print("Por favor, introduzca su nif:");
+            String nif = scanner.nextLine();
+
+            System.out.println("Confirme su número de vuelo");
+            int flightNumber = scanner.nextInt();
+            scanner.nextLine();
+
+            airline.showPassengerSeat(flightNumber, nif);
 
 
+        } else if (option == 5) {
 
 
+            System.out.print("Por favor, necesito que intruduzca los siguientes datos para poder cambiar su asiento");
 
 
+            System.out.print("Número de vuelo:");
+            int flightNumber = scanner.nextInt();
+            scanner.nextLine();
+
+            System.out.print("NIF:");
+            String nif = scanner.nextLine();
+
+            System.out.print("Asiento:");
+            int seatNumber = scanner.nextInt();
+            scanner.nextLine();
+
+
+            airline.updateSeatNumber(flightNumber, nif, seatNumber);
+
+
+        } else if (option == 6) {
+
+            System.out.println("Saliendo del programa...");
+
+        } else {
+
+            System.out.println("Opción inválida");
+        }
 
 
         } while (option != 6);
-
-
-
-
-
 
 
 
