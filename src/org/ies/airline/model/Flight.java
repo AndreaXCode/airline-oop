@@ -23,27 +23,20 @@ public class Flight {
 
     public void showInfo(){
 
-        Scanner scanner = new Scanner(System.in);
+
 
         System.out.println("--Datos del vuelo--");
 
-        System.out.print("Numero de vuelo:");
-        int flightNumber = scanner.nextInt();
-        scanner.nextLine();
+        System.out.println("Numero de vuelo: " + flightNumber);
 
-        System.out.print("Origen:");
-        String origin = scanner.nextLine();
+        System.out.println("Origen: " + origin);
 
-        System.out.print("Destino:");
-        String destination = scanner.nextLine();
+        System.out.println("Destino: " + destination);
 
-        System.out.print("Puerta de embarque:");
-        int gateNumber = scanner.nextInt();
-        scanner.nextLine();
-
-        System.out.println("Pasajeros:");
+        System.out.println("Puerta de embarque: " + gateNumber);
 
 
+        //Pasajeros en el for
         for (Passenger passenger: passengers) {
 
             passenger.showInfo();

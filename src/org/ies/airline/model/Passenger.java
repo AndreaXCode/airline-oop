@@ -21,21 +21,20 @@ public class Passenger {
 
     public void showInfo(){
 
-        Scanner scanner = new Scanner(System.in);
+
 
         System.out.println("--Datos del pasajero--");
 
-        System.out.print("NIF:");
-        String nif = scanner.nextLine();
+        System.out.println("NIF: " + nif);
 
-        System.out.print("Nombre:");
-        String name = scanner.nextLine();
 
-        System.out.print("Apellido:");
-        String surname = scanner.nextLine();
+        System.out.println("Nombre: " + name);
 
-        System.out.print("NIF:");
-        String seatNumber = scanner.nextLine();
+        System.out.println("Apellido: " + surname);
+
+
+        System.out.println("Número de asiento: " + seatNumber);
+
 
 
     }

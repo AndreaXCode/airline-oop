@@ -52,7 +52,7 @@ public class AirlineApp {
         } else if (option == 2) {
 
             //Mostrar vuelos origen
-            System.out.print("Por favor, introduzca su origen:");
+            System.out.print("Por favor, introduzca su origen: ");
             String origin = scanner.nextLine();
 
             airline.showFlightsFromOrigin(origin);
@@ -60,7 +60,7 @@ public class AirlineApp {
         } else if (option == 3) {
 
             //Muestra los vuelos de un pasajero
-            System.out.print("Por favor, introduzca el nif del pasajero:");
+            System.out.print("Por favor, introduzca el nif del pasajero: ");
             String nif = scanner.nextLine();
 
             airline.showPassengerFlights(nif);
@@ -69,30 +69,32 @@ public class AirlineApp {
         } else if (option == 4) {
 
             //Muestra asiento de pasajero
-            System.out.print("Por favor, introduzca su nif:");
+            System.out.println("Por favor, introduzca su nif: ");
             String nif = scanner.nextLine();
 
-            System.out.println("Confirme su número de vuelo");
+            System.out.println("Confirme su número de vuelo: ");
             int flightNumber = scanner.nextInt();
             scanner.nextLine();
 
-            airline.getPassengerSeat(flightNumber, nif);
+            Integer seatnumber = airline.getPassengerSeat(flightNumber, nif);
+            System.out.println(seatnumber);
+
 
 
         } else if (option == 5) {
 
 
-            System.out.print("Por favor, necesito que intruduzca los siguientes datos para poder cambiar su asiento");
+            System.out.println("Por favor, necesito que intruduzca los siguientes datos para poder cambiar su asiento");
 
 
-            System.out.print("Número de vuelo:");
+            System.out.println("Número de vuelo:");
             int flightNumber = scanner.nextInt();
             scanner.nextLine();
 
-            System.out.print("NIF:");
+            System.out.println("NIF:");
             String nif = scanner.nextLine();
 
-            System.out.print("Asiento:");
+            System.out.println("Introduce el nuevo asiento:");
             int seatNumber = scanner.nextInt();
             scanner.nextLine();
 
