@@ -100,6 +100,7 @@ public class AirlineApp {
 
 
             airline.updateSeatNumber(flightNumber, nif, seatNumber);
+            System.out.println(seatNumber);
 
 
         } else if (option == 6) {
